@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport"
+			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="js/lib/ionic1/css/ionic.min.css">
+		<link rel="stylesheet" href="css/media-100.css">
+		<link rel="stylesheet" href="css/app1.css">
+		<script src="js/lib/ionic1/js/ionic.bundle.min.js"></script>
+	</head>
+
+	<body	>
+
+		<ion-nav-view></ion-nav-view>
+
+	</body>
+	
+	<script type="text/javascript">
+		var app=angular.module("myApp",["ionic","ui.router"]);
+
+		/*自定义指令取消在二级路由里面的tabs*/
+        app.directive('hideTabs', function($rootScope){
+            return {
+                restrict: 'A',
+                link: function (scope, element, attributes) {
+                    scope.$on('$ionicView.beforeEnter', function () {
+                        scope.$watch(attributes.hideTabs, function (value) {
+                            $rootScope.hideTabs = value;
+                        });
+                    });
+                    scope.$on('$ionicView.beforeLeave', function () {
+                        $rootScope.hideTabs = false;
+                    });
+                }
+            }
+        });
+		app.controller("myCtrl",["$scope",function($scope){
+			$scope.name="xiaoxiao"
+		}]);
+		
+		app.config(["$stateProvider","$urlRouterProvider",
+		function($stateProvider,$urlRouterProvider){
+			
+			$urlRouterProvider.otherwise("/tems");
+			
+			$stateProvider
+			.state({
+				name:"tems",
+				url:"/tems",
+				templateUrl:"tem/tems.html"
+			})
+				.state({
+					name:"tems.tem1",
+					url:"/tem1",
+					views:{
+					    "tem1view":{
+					        templateUrl:"tem/intem/tem1.html"
+						}
+					}
+				})
+				.state({
+					name:"tems.tem2",
+					url:"/tem2",
+					views:{
+					    "tem2view":{
+                            templateUrl:"tem/intem/tem2.html"
+						}
+					}
+				})
+                .state({
+                    name:"tems.tem5",
+                    url:"/tem5",
+                    views:{
+                        "tem2view":{
+                            templateUrl:"tem/intem/tem5.html"
+                        }
+                    }
+                })
+                .state({
+                    name:"tems.tem6",
+                    url:"/tem6",
+                    views:{
+                        "tem2view":{
+                            templateUrl:"tem/intem/tem6.html"
+                        }
+                    }
+                })
+				.state({
+					name:"tems.tem3",
+					url:"/tem3",
+					views:{
+					    "tem3view":{
+					        templateUrl:"tem/intem/tem3.html"
+						}
+					}
+				})
+
+				.state({
+					name:"tems.tem4",
+					url:"/tem4",
+					views:{
+					    "tem4view":{
+                            templateUrl:"tem/intem/tem4.html"
+						}
+					}
+				})
+			
+		}]);
+	</script>
+</html>

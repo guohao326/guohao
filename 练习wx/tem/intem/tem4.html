@@ -1,0 +1,79 @@
+<style>
+a{
+text-decoration: none;
+}
+.bat_top{
+background: url("images/imgh/1.png")!important;
+background-size: 100%!important;
+background-repeat: no-repeat!important;
+align-title:center;
+}
+.scroll{
+margin-top: 0.2rem;
+}
+.scroll input{
+margin-left: 0.2rem;
+}
+.scroll span{
+width: 0.8rem;
+}
+.list{
+overflow: hidden;
+margin-top: 0.2rem;
+}
+.list span{
+margin-top: 0.1rem;
+}
+.button_1{
+float: right;
+}
+.checkbox input:checked+.checkbox-icon:before{
+    background: red;
+    border-color: red;
+}
+.toggle input:checked+.track{
+border-color: #639;
+background-color: #639;
+}
+
+</style>
+        <ion-header-bar class="bat_top bar bar-royal">
+            <h1 class="title">新增地址</h1>
+            <buttom class="button button-clear">保存</buttom>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list class="cop_list1">
+                <label class="item item-input">
+                    <span>收件人</span>
+                    <input type="text" placeholder="请输入收件人的姓名">
+                </label>
+                <label class="item item-input">
+                    <span>电话</span>
+                    <input type="text" placeholder="请输入收件人手机号码">
+                </label>
+                <label class="item item-input">
+                    <span>地区</span>
+                    <input type="text" placeholder="省市-城市-地区">
+                </label>
+                <label class="item item-input">
+                    <span>地址</span>
+                    <input type="text" placeholder="请填写到街道门牌号">
+                </label>
+                <label class="item item-input">
+                    <span>邮编</span>
+                    <input type="text" placeholder="请输入邮编号码">
+                </label>
+            </ion-list>
+            <ion-list>
+                <ion-item>
+                    <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+                    <span>设为默认收货地址</span>
+                    <label class="button_1 toggle">
+                        <input type="checkbox">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </ion-item>
+            </ion-list>
+        </ion-content>

@@ -1,0 +1,95 @@
+a{
+    text-decoration: none;
+}
+.bat_top{
+    background: url("../images/imgh/1.png")!important;
+    background-size: 100%!important;
+    align-title:center;
+}
+.content_nav{
+    width: 90%;
+    margin: auto;
+    border-radius: 0.05rem;
+    border: 0.01rem solid #639;
+    padding: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.content_nav a{
+    padding: 0.1rem 0;
+    font-size: 0.3rem;
+    text-align: center;
+    color: #639;
+}
+.nowNav{
+    background: #639;
+    color: #fff!important;
+}
+ion-item div{
+    font-size: 0.2rem;
+    white-space: normal;
+    margin-bottom: 0.1rem;
+}
+ion-item img{
+    width: 1.8rem;
+    height: 1.8rem;
+
+}
+ion-item .divImg{
+    margin-right: 0.2rem;
+    float: left;
+}
+ion-item .div2{
+    font-size: 0.3rem;
+    padding: 1% 0;
+}
+ion-item .div3{
+    font-size: 0.2rem;
+    padding: 1% 0;
+    vertical-align: sub;
+    line-height: 0.25rem;
+}
+ion-item .div4 .span_1{
+    color: #639;
+    padding: 1% 0;
+}
+ion-item .div4 .span_2{
+    color: #639;
+    font-size: 0.4rem;
+}
+ion-item .div4 .span_3{
+    color: #999;
+    margin-left: 0.1rem;
+}
+ion-item  .spanRight{
+    float: right;
+    font-size: 0.2rem;
+    color: #999;
+}
+.item.item-checkbox.ng-valid{
+    border-width: 0;
+    padding-left: -0.1rem;
+    margin-left: -0.1rem;
+}
+.bar.bar-footer{
+    padding: 0;
+}
+.bar.bar-footer .button_1{
+    width: 35%;
+}
+.bar.bar-footer .button_1 label{
+    text-align: center;
+    border-width: 0;
+}
+.bar.bar-footer .button_2{
+    width: 65%;
+    background: #639;
+    color: #fff;
+}
+.bar.bar-footer .button_2 button{
+    background: #639;
+    color: #fff;
+}
+.scroll-content .checkbox-icon{
+    margin-left: -0.15rem;
+}
